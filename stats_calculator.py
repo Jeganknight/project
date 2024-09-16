@@ -1,7 +1,6 @@
-# src/stats_calculator.py
+# stats_calculator.py
 import statistics
 import sys
-import os
 
 def calculate_statistics(data):
     mean = statistics.mean(data)
@@ -10,8 +9,6 @@ def calculate_statistics(data):
     return mean, median, std_dev
 
 def read_data_from_file(filename):
-    if not os.path.isfile(filename):
-        raise FileNotFoundError(f"{filename} not found.")
     with open(filename, 'r') as file:
         return [float(line.strip()) for line in file]
 
@@ -23,3 +20,4 @@ if __name__ == "__main__":
         data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     mean, median, std_dev = calculate_statistics(data)
     print(f"Mean: {mean}, Median: {median}, Standard Deviation: {std_dev}")
+print("Succesflly Done!")
