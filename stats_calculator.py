@@ -21,3 +21,4 @@ if __name__ == "__main__":
     mean, median, std_dev = calculate_statistics(data)
     print(f"Mean: {mean}, Median: {median}, Standard Deviation: {std_dev}")
 print("Succesflly Done!")
+print("Completed")
